@@ -1,1 +1,1 @@
-select * from RAW.GLOBALMART.CUSTOMER
+select * from RAW.GLOBALMART.customer

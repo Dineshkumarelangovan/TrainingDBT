@@ -6,6 +6,7 @@ select
     o.orderdate,
     c.customername,
     p.category,
+    o.productid,
  (o.ordersellingprice - o.ordercostprice) as orderprofit from 
 {{ ref('raw_orders') }} as o
  left join

@@ -1,5 +1,8 @@
-select o.customerid,
+
+
+select 
     o.orderid,
+    o.customerid,
     o.orderdate,
     c.customername,
     p.category,

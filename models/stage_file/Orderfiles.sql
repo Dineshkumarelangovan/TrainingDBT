@@ -1,7 +1,13 @@
-{{
-    config(
-        materialized='table'
-    )
-}}
-
-select * ,(ordersellingprice - ordercostprice) as orderprofit from raw.GLOBALMART.orders
+select o.customerid,
+    o.orderid,
+    o.orderdate,
+    c.customername,
+    p.category,
+ (o.ordersellingprice - o.ordercostprice) as orderprofit from 
+{{ ref('raw_orders') }} as o
+ left join
+{{ ref('RAW_Customer') }} as c
+ on o.customerid = c.customerid
+left join 
+{{ ref('raw_products') }} as p 
+on o.productid = p.productid

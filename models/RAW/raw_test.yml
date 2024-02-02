@@ -1,0 +1,8 @@
+models:
+  - name: raw_Customer
+    columns:
+      - name: customerid
+        tests:
+          - unique
+          
+            

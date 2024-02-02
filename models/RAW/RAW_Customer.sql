@@ -1,6 +1,2 @@
-{{
-    config(
-        materialized='table'
-    )
-}}
-select * from RAW.GLOBALMART.customer
+
+select * from {{ source('linking', 'customer') }}

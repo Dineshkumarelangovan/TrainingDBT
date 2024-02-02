@@ -6,6 +6,16 @@ models:
       - name: CUSTOMERNAME
         tests:
           - not_null
+      - name: CUSTOMERID
+        tests:
           - unique
+      - name: SEGMENT
+        tests:
+          - accepted_values:
+              values:
+                - 'Consumer'
+                - 'Home Office'
+                - 'Corporate'
+              
               
               

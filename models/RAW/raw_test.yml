@@ -1,8 +1,8 @@
 models:
   - name: raw_Customer
     columns:
-      - name: customerid
+      - name: CUSTOMERID
         tests:
           - unique
-          
+
             

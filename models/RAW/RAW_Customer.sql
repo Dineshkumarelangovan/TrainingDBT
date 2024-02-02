@@ -1,2 +1,6 @@
 
-select * from {{ source('linking', 'customer') }}
+
+select * from {{ ref('RAW_Customer') }}
+
+
+

@@ -2,4 +2,4 @@
 
 
 
-select * from {{ source('linking', 'orders') }}
+select * from {{ ref('raw_orders') }}
